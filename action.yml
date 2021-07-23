@@ -1,0 +1,5 @@
+name: 'Setup Linqpad'
+description: 'Setup Linqpad and add to PATH for use'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
