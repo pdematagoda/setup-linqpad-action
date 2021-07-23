@@ -13,7 +13,7 @@ async function extractZipFile(zipFilePath, onZipExtracted) {
     const zipFile = new StreamZip.async({ file: zipFilePath });
 
     zipFile.extract(null, extractDirectory).then(function onExtractionFinished() {
-        onZipExtracted(extractDirectory);
+        onZipExtracted(fs.realpathSync(extractDirectory));
     });
 }
 
