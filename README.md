@@ -4,4 +4,4 @@ This action downloads Linqpad 6 and adds it to the PATH for subsequent commands 
 
 ## Example usage
 
-uses: pdematagoda/setup-linqpad-action@v0.3
+`uses: pdematagoda/setup-linqpad-action@v0.3`
