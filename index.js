@@ -44,9 +44,7 @@ function downloadAndExtractZipFile(onZipExtracted) {
 function addDirectoryToPath(directoryPath) {
     console.info(`Adding '${directoryPath}' to PATH for use`);
 
-    const currentPath = process.env.PATH;
-
-    process.env.PATH = currentPath + ';' + directoryPath;
+    core.addPath(directoryPath);
 }
 
 try {
