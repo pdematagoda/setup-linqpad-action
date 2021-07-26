@@ -6003,6 +6003,9 @@ async function extractZipFile(zipFilePath, onZipExtracted) {
 
     zipFile.extract(null, extractDirectory).then(function onExtractionFinished() {
         onZipExtracted(fs.realpathSync(extractDirectory));
+    }).catch(function onExtractionFailed(error) {
+        console.error('Failed to extract Linqpad ZIP file.');
+        core.setFailed(error);
     });
 }
 
@@ -6021,6 +6024,9 @@ function downloadZipFile(onZipFileDownloaded) {
     
             onZipFileDownloaded(stream.path);
         });
+    }).on('error', function onDownloadFailed(error) {
+        console.error('Failed to download Linqpad ZIP file.');
+        core.setFailed(error);
     });
 }
 
