@@ -1,7 +1,19 @@
 # Linqpad setup action
 
-This action downloads Linqpad 6 and adds it to the PATH for subsequent commands in your workflow to use.
+This action downloads either Linqpad 5 or 6 and adds it to the PATH for subsequent commands in your workflow to use.
 
-## Example usage
+As Linqpad 5 and 6 can work side-by-side, you may invoke this action more than once if required.
 
-`uses: pdematagoda/setup-linqpad-action@v0.3`
+## Example usage (default with Linqpad 6)
+
+`uses: pdematagoda/setup-linqpad-action@v0.5`
+
+## Example usage (version specified)
+
+The `version` input parameter accepts either `5.x` or `6.x`.
+
+```yaml
+    uses: pdematagoda/setup-linqpad-action@v0.5
+        input:
+            version: '5.x'
+```

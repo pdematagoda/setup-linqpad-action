@@ -6009,9 +6009,22 @@ async function extractZipFile(zipFilePath, onZipExtracted) {
     });
 }
 
+function getVersionFragment() {
+    const versionToDownload = core.getInput('version');
+
+    if (versionToDownload === '6.x') {
+        return '6';
+    }
+    if (versionToDownload === '5.x') {
+        return '5-AnyCPU';
+    }
+
+    throw new Error('Invalid version specified, it must be either \'5.x\' or \'6.x\'.');
+}
+
 function downloadZipFile(onZipFileDownloaded) {
     const stream = temp.createWriteStream();
-    const requestUrl = 'https://linqpad.azureedge.net/public/LINQPad6.zip';
+    const requestUrl = `https://linqpad.azureedge.net/public/LINQPad${getVersionFragment()}.zip`;
 
     console.info(`Downloading Linqpad from '${requestUrl}'`);
     const request = https.get(requestUrl, function writeFile(response) {
