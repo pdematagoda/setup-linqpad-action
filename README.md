@@ -13,7 +13,7 @@ As Linqpad 5 and 6 can work side-by-side, you may invoke this action more than o
 The `version` input parameter accepts either `5.x` or `6.x`.
 
 ```yaml
-    uses: pdematagoda/setup-linqpad-action@v0.5
+    uses: pdematagoda/setup-linqpad-action@v0.6
         input:
             version: '5.x'
 ```
