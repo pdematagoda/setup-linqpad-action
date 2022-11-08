@@ -1,7 +1,7 @@
 name: 'Setup Linqpad'
 description: 'Setup Linqpad and add to PATH for use'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
 inputs:
   version:
