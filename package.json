@@ -18,11 +18,11 @@
   },
   "homepage": "https://github.com/pdematagoda/setup-linqpad-action#readme",
   "dependencies": {
-    "@actions/core": "^1.4.0",
-    "node-stream-zip": "^1.13.6",
+    "@actions/core": "^1.10.0",
+    "node-stream-zip": "^1.15.0",
     "temp": "^0.9.4"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.29.0"
+    "@vercel/ncc": "^0.34.0"
   }
 }
